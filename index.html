@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap" rel="stylesheet">
+    <title>Encriptador - Challenge Alura</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="imagenes/lg.png" alt="Logo Alura Latam">
+    </header>
+
+    <main>
+        <section class="input-section">
+            <div class="text-box">
+                <textarea class="input-text" placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+
+            <div class="alert">
+                <img class="alert-icon" src="imagenes/aviso.svg" alt="Ícono de alerta">
+                <p>Solo se permiten letras minúsculas y sin acentos.</p>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="encrypt-btn" onclick="encrypt()">Encriptar</button>
+                <button type="button" class="decrypt-btn" onclick="decrypt()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="output-section">
+            <div class="empty-state">
+                <img class="empty-image" src="imagenes/mun.svg" alt="Imagen de muñeco">
+                <h2>No se encontró ningún mensaje</h2>
+                <p>Escribe un texto para encriptar o desencriptar.</p>
+            </div>
+
+            <div class="result-box" style="display: none;">
+                <textarea class="output-text" readonly></textarea>
+                <button type="button" class="copy-btn" onclick="copyToClipboard()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

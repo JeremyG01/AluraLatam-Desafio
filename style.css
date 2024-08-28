@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #495057;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.header {
+    padding: 1.5% 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3%;
+}
+
+.input-section, .output-section {
+    width: 45%;
+}
+
+.input-text, .output-text {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #0A3871;
+    border: none;
+    background-color: #f4f4f4;
+    resize: none;
+}
+
+.input-text:focus, .output-text:focus {
+    outline: none;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    color: #495057;
+}
+
+.alert-icon {
+    height: 1rem;
+}
+
+.action-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.encrypt-btn {
+    background-color: #0A3871;
+    color: #ffffff;
+}
+
+.decrypt-btn {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.encrypt-btn:hover, .decrypt-btn:hover {
+    background-color: #ffffff;
+    color: #0A3871;
+}
+
+.empty-state {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.empty-image {
+    width: 80%;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.copy-btn {
+    width: 80%;
+    background-color: #0A3871;
+    color: #ffffff;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.copy-btn:hover {
+    background-color: #ffffff;
+    color: #0A3871;
+}
+
+/* Responsive Design */
+@media (max-width: 1080px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .input-section, .output-section {
+        width: 80%;
+    }
+
+    .input-text, .output-text {
+        height: 150px;
+    }
+}
+
+@media (max-width: 520px) {
+    .input-text, .output-text {
+        font-size: 0.875rem;
+    }
+
+    button {
+        font-size: 0.875rem;
+    }
+
+    .copy-btn {
+        width: 100%;
+    }
+}
